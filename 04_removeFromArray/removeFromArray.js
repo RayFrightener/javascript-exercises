@@ -1,4 +1,8 @@
-const removeFromArray = function() {
+const removeFromArray = function(arr,toRemove,toRemoveToo) {
+function elementToKeep(element){
+    return element !== toRemove || element !== toRemoveToo;
+}
+return arr.filter(elementToKeep);
 
 };
 
