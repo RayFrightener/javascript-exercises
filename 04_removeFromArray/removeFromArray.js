@@ -1,8 +1,8 @@
-const removeFromArray = function(arr,toRemove,toRemoveToo) {
-function elementToKeep(element){
-    return element !== toRemove || element !== toRemoveToo;
+const removeFromArray = function(arr, ...valuesToRemove) {
+function isNotTheValueToRemove(element){
+    return !valuesToRemove.includes(element);
 }
-return arr.filter(elementToKeep);
+return arr.filter(isNotTheValueToRemove);
 
 };
 
